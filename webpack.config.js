@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, 'src'), // обсалютный путь до папки src, берётся за точку отсчёта
   entry: {
-    main: ['@babel/polyfill', './index.js'],
+    main: './index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -42,16 +42,6 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         // Порядок выполнения справа налево (sass-loader -> css-loader -> Mini...)
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
       },
     ],
   },
