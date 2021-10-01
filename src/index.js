@@ -12,4 +12,4 @@ const obj2 = {
 
 const info = { ...obj1, ...obj2 };
 
-console.log(c);
+console.log('test', c);

@@ -54,5 +54,11 @@ module.exports = (env, argv) => {
       ],
     },
     devtool: isDev ? 'source-map' : false,
+    devServer: {
+      port: '8888',
+      open: true,
+      hot: true,
+      watchFiles: './',
+    },
   };
 };
