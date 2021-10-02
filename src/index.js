@@ -1,4 +1,4 @@
-import './scss/styles.scss';
+require('./scss/styles.scss');
 
 const c = 'test';
 
@@ -12,4 +12,5 @@ const obj2 = {
 
 const info = { ...obj1, ...obj2 };
 
+console.log('Info', info);
 console.log('test', c);
